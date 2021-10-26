@@ -8,17 +8,27 @@ extents = Vector2( 4195.87, 10 )
 
 [node name="Level1" type="Node2D"]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="IPad" type="Node2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="Platform1" parent="IPad" instance=ExtResource( 2 )]
+position = Vector2( 244.184, 362.49 )
+
+[node name="Platform2" parent="IPad" instance=ExtResource( 2 )]
+position = Vector2( 2285.17, 362.979 )
+
+[node name="Platform3" parent="IPad" instance=ExtResource( 2 )]
+position = Vector2( 1270.61, 361.839 )
+
+[node name="Fallzone" type="Area2D" parent="."]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fallzone"]
 position = Vector2( 2.80457, 1290.52 )
 shape = SubResource( 1 )
 
-[node name="Platform1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 215, 358 )
-
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 211, 209 )
+collision_mask = 31
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( -211, -209 )
@@ -28,7 +38,4 @@ drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 smoothing_enabled = true
 
-[node name="Platform2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1315.51, 359.594 )
-
-[connection signal="body_entered" from="Area2D" to="Player" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Fallzone" to="Player" method="_on_Area2D_body_entered"]
