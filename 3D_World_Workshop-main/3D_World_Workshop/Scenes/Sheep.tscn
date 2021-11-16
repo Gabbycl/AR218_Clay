@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Materials/Light Brownl.tres" type="Material" id=1]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="CubeMesh" id=3]
+
+[sub_resource type="SphereMesh" id=4]
+
+[node name="Sheep" type="Spatial"]
+
+[node name="Body" type="MeshInstance" parent="."]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 4.19984, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Leg1" type="MeshInstance" parent="Body"]
+transform = Transform( 0.268659, -2.91038e-11, 0, 7.27596e-12, 0.834674, 0, 0, 0, 0.242222, 0.714098, -1.20912, 0.716185 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 1 )
+
+[node name="Face" type="MeshInstance" parent="Body"]
+transform = Transform( 0.252233, 0, 0, 0, 0.421249, 0, 0, 0, 0.328349, -0.0103317, 0.42101, 1.27782 )
+mesh = SubResource( 3 )
+material/0 = ExtResource( 1 )
+
+[node name="Head" type="MeshInstance" parent="Body"]
+transform = Transform( 0.5, -0.000148353, 0, 0.000148353, 0.5, 0, 0, 0, 0.5, 9.31323e-10, 0.844772, 1.31396 )
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="Leg2" type="MeshInstance" parent="Body"]
+transform = Transform( 0.268659, -2.91038e-11, 0, 7.27596e-12, 0.834675, 0, 0, 0, 0.242223, -0.723255, -1.20912, 0.716185 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 1 )
+
+[node name="Leg3" type="MeshInstance" parent="Body"]
+transform = Transform( 0.268659, -2.91038e-11, 0, 7.27596e-12, 0.834675, 0, 0, 0, 0.242223, -0.723255, -1.20912, -0.785253 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 1 )
+
+[node name="Leg4" type="MeshInstance" parent="Body"]
+transform = Transform( 0.268659, -2.91038e-11, 0, 7.27596e-12, 0.834675, 0, 0, 0, 0.242222, 0.723253, -1.20912, -0.785253 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 1 )
