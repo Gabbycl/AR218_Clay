@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Materials/Light Brownl.tres" type="Material" id=1]
+
+[sub_resource type="SphereMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=3]
+
+[sub_resource type="CylinderMesh" id=2]
+
+[node name="Stool" type="Spatial"]
+
+[node name="Stool top" type="MeshInstance" parent="."]
+transform = Transform( 0.702339, 0, 0, 0, 0.225572, 0, 0, 0, 0.70852, 0, 1.8668, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 3 )
+
+[node name="Leg" type="MeshInstance" parent="Stool top"]
+transform = Transform( 0.162345, 0, 0, 0, 4.09426, 0.0567748, 0, -0.133154, 0.155425, 0, -4.24533, 0.51756 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 1 )
+
+[node name="Leg2" type="MeshInstance" parent="Stool top"]
+transform = Transform( 0.16057, -0.193627, -0.00304641, 0.0736529, 4.06832, -0.0128332, 0.00368609, 0.048455, 0.15639, 0.647029, -4.34626, -0.122652 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 1 )
+
+[node name="Leg3" type="MeshInstance" parent="Stool top"]
+transform = Transform( 0.160826, 0.176659, -0.00407075, -0.0680099, 4.0758, -0.00969615, 0.00368609, 0.048455, 0.15639, -0.6606, -4.34626, -0.122652 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 1 )
+
+[node name="Leg4" type="MeshInstance" parent="Stool top"]
+transform = Transform( 0.162345, 3.14932e-09, -6.63015e-10, -3.87067e-10, 4.09275, -0.0448474, 3.28615e-10, 0.137787, 0.15582, -0.00598551, -4.19119, -0.606067 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 1 )
