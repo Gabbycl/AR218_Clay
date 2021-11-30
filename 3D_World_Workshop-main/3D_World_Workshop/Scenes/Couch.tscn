@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="CubeMesh" id=3]
+
+[sub_resource type="CubeMesh" id=4]
+
+[sub_resource type="CylinderMesh" id=5]
+
+[node name="Couch" type="Spatial"]
+
+[node name="Couch" type="MeshInstance" parent="."]
+transform = Transform( 0.804358, 0, 0, 0, 0.09943, 0, 0, 0, 0.341078, -0.0033772, 0.107872, -3.24249e-05 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="pillow" type="MeshInstance" parent="Couch"]
+transform = Transform( 0.211322, 0, -0.0475511, 0, 1.27104, 0, 0.362529, 0, 0.154153, 0.616793, 0.939781, 0.0927741 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="couch arm2" type="MeshInstance" parent="Couch"]
+transform = Transform( 0.121233, 0, 0, 0, 1.19356, 0, 0, 0, 0.643285, -0.876561, 1.2024, 0.140412 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="couch arm" type="MeshInstance" parent="Couch"]
+transform = Transform( 0.121233, 0, 0, 0, 1.19356, 0, 0, 0, 0.643285, 0.878791, 1.20242, 0.188543 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="back of couch" type="MeshInstance" parent="Couch"]
+transform = Transform( 0.994312, 0, 0, 0, 2.13576, 0, 0, 0, 0.464859, 0, 1.23111, -0.510013 )
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="pillow2" type="MeshInstance" parent="Couch"]
+transform = Transform( 0.200316, 0, 0.0519096, 0, 1.27104, 0, -0.395759, 0, 0.146124, -0.639531, 0.939781, 0.0927741 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="pillow 3" type="MeshInstance" parent="Couch"]
+transform = Transform( 0.00349017, -0.276904, -0.00335873, 0.562318, 0.0192952, 1.02735, -0.236639, -0.0165281, 0.174671, 0.00862931, 0.979207, 0.0927741 )
+mesh = SubResource( 5 )
+material/0 = null
