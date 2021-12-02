@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[node name="Table" type="Spatial"]
+
+[node name="Tabletop" type="MeshInstance" parent="."]
+transform = Transform( 0.844956, 0, 0, 0, 0.0781322, 0, 0, 0, 0.539568, 0, 0.707678, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="Tabletop"]
+transform = Transform( 0.0676208, 0, 0, 0, 5.42984, -0.00146504, 0, -0.00540798, 0.116764, -0.84759, -5.34236, 0.739631 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Tabletop2" type="MeshInstance" parent="Tabletop"]
+transform = Transform( 0.904908, 0, 0, 0, 1, 0, 0, 0, 0.792341, 0, -4.93737, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance" type="MeshInstance" parent="Tabletop"]
+transform = Transform( 0.0676069, -0.010457, 0, 0.0148406, 5.56975, 0.0134267, -3.5785e-05, -0.0134303, 0.116758, 0.849094, -5.61118, 0.779244 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance3" type="MeshInstance" parent="Tabletop"]
+transform = Transform( 0.0676208, 0, 0, 0, 5.57391, 0, 0, 0, 0.116774, -0.849165, -5.34589, -0.818663 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance4" type="MeshInstance" parent="Tabletop"]
+transform = Transform( 0.0676208, 0, 0, 0, 5.52081, 0, 0, 0, 0.116774, 0.849417, -5.2959, -0.818663 )
+mesh = SubResource( 2 )
+material/0 = null

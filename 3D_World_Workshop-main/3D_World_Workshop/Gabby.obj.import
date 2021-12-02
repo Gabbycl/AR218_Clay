@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Gabby.obj-8d8fbf3dd0da4e3203a666acab6610ef.mesh"
+
+[deps]
+
+files=[ "res://.import/Gabby.obj-8d8fbf3dd0da4e3203a666acab6610ef.mesh" ]
+
+source_file="res://Gabby.obj"
+dest_files=[ "res://.import/Gabby.obj-8d8fbf3dd0da4e3203a666acab6610ef.mesh", "res://.import/Gabby.obj-8d8fbf3dd0da4e3203a666acab6610ef.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

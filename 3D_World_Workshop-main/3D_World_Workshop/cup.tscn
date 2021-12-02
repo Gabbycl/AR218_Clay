@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="CylinderMesh" id=1]
+
+[sub_resource type="CylinderMesh" id=2]
+
+[node name="cup" type="Spatial"]
+
+[node name="cup" type="MeshInstance" parent="."]
+transform = Transform( 0.0819911, -7.42594e-11, 0, -1.54243e-10, 0.153411, 0, 0, 0, 0.0855115, 0.702541, 2.46777, 0.535456 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="straw" type="MeshInstance" parent="cup"]
+transform = Transform( 0.0742234, -0.0786237, 0.0772716, 0.0099559, 1.62153, -0.00144587, -0.122276, 0.294165, 0.0359371, -0.167902, 0.80708, 0.744089 )
+mesh = SubResource( 2 )
+material/0 = null
