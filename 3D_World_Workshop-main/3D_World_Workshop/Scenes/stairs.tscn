@@ -1,0 +1,89 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="CubeMesh" id=3]
+
+[sub_resource type="CubeMesh" id=2]
+
+[node name="stairs" type="Spatial"]
+
+[node name="Rail" type="MeshInstance" parent="."]
+transform = Transform( 0.0382818, 0, 0, 0, 0.0232208, -0.647322, 0, 0.0197206, 0.762217, 0, 0.862952, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Rail2" type="MeshInstance" parent="Rail"]
+transform = Transform( 1, 0, 0, 0, 0.648236, -4.10477, 0, 0.0231962, 0.115612, 0, -4.12322, 0.935812 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Rail3" type="MeshInstance" parent="Rail/Rail2"]
+transform = Transform( 0.959447, 0, 0, 0, 0.64485, 24.092, 0, -0.129032, 3.81583, 0, -42.5411, -7.7116 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="Step1" type="MeshInstance" parent="Rail/Rail2/Rail3"]
+transform = Transform( 9.22941, 0, 0, 0, 1.97499, 3.39896, 0, -0.0485612, 0.11522, -10.9663, -7.58249, 1.90353 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Step7" type="MeshInstance" parent="Rail/Rail2/Rail3/Step1"]
+transform = Transform( 1, 0, 0, 0, 1.12463, -5.45235e-11, 0, -7.82629e-10, 1, -0.00215042, 12.3462, -7.35064 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Step6" type="MeshInstance" parent="Rail/Rail2/Rail3/Step1"]
+transform = Transform( 1, 0, 0, 0, 1.12463, -5.45235e-11, 0, -7.82629e-10, 1, -0.00215042, 10.0998, -6.17148 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Step4" type="MeshInstance" parent="Rail/Rail2/Rail3/Step1"]
+transform = Transform( 1, 0, 0, 0, 1.12463, -5.45235e-11, 0, -7.82623e-10, 1, -0.00215042, 5.5998, -3.69408 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Step2" type="MeshInstance" parent="Rail/Rail2/Rail3/Step1"]
+transform = Transform( 1, 0, 0, 0, 1.08242, -5.45235e-11, 0, -2.53679e-08, 1, 0.00062418, 1.47734, -1.01143 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Step3" type="MeshInstance" parent="Rail/Rail2/Rail3/Step1"]
+transform = Transform( 1, 0, 0, 0, 1.16321, -5.45235e-11, 0, -8.09479e-10, 1, -0.00215042, 3.54047, -2.32253 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Step5" type="MeshInstance" parent="Rail/Rail2/Rail3/Step1"]
+transform = Transform( 1, 0, 0, 0, 1.12463, -5.45235e-11, 0, -7.82629e-10, 1, -0.00215042, 7.84379, -4.864 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Step8" type="MeshInstance" parent="Rail/Rail2/Rail3/Step1"]
+transform = Transform( 1, 0, 0, 0, 1.12463, -5.45235e-11, 0, -7.82629e-10, 1, -0.00215042, 14.5355, -8.55651 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Step9" type="MeshInstance" parent="Rail/Rail2/Rail3/Step1"]
+transform = Transform( 1, 0, 0, 0, 1.12463, -5.45235e-11, 0, -7.82623e-10, 1, -0.00215042, 16.7266, -10.1101 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Step10" type="MeshInstance" parent="Rail/Rail2/Rail3/Step1"]
+transform = Transform( 1, 0, 0, 0, 1.12463, -5.45235e-11, 0, -7.82623e-10, 1, -0.00215042, 18.9538, -11.7039 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Step11" type="MeshInstance" parent="Rail/Rail2/Rail3/Step1"]
+transform = Transform( 1, 0, 0, 0, 1.12463, -5.45235e-11, 0, -7.82623e-10, 1, -0.00215042, 21.2074, -13.3516 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Step12" type="MeshInstance" parent="Rail/Rail2/Rail3/Step1"]
+transform = Transform( 1, 0, 0, 0, 1.12463, -5.45235e-11, 0, -7.82623e-10, 1, -0.00215042, 23.5067, -14.4309 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Step13" type="MeshInstance" parent="Rail/Rail2/Rail3/Step1"]
+transform = Transform( 1, 0, 0, 0, 1.12463, -5.45235e-11, 0, -7.82623e-10, 1, -0.00215042, 25.1956, -15.6967 )
+mesh = SubResource( 2 )
+material/0 = null
