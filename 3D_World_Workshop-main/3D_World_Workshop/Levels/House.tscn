@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scenes/Couch.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Table.tscn" type="PackedScene" id=2]
@@ -14,13 +14,17 @@ data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1
 
 [sub_resource type="CubeMesh" id=3]
 
-[sub_resource type="CubeMesh" id=4]
+[sub_resource type="SpatialMaterial" id=4]
 
 [sub_resource type="CubeMesh" id=5]
 
 [sub_resource type="CubeMesh" id=6]
 
-[sub_resource type="PrismMesh" id=7]
+[sub_resource type="CubeMesh" id=7]
+
+[sub_resource type="CubeMesh" id=8]
+
+[sub_resource type="PrismMesh" id=9]
 
 [node name="House" type="Spatial"]
 
@@ -30,49 +34,54 @@ mesh = SubResource( 1 )
 material/0 = null
 
 [node name="StaticBody" type="StaticBody" parent="Floor"]
-transform = Transform( 9.5483, 0, 0, 0, 1, 0, 0, 0, 8.78206, 0, -4.44364, 0 )
+transform = Transform( 12.5591, 0, 0, 0, 1.24533, 0, 0, 0, 8.78206, 0, -4.44364, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Floor/StaticBody"]
 shape = SubResource( 2 )
 
+[node name="MeshInstance" type="MeshInstance" parent="Floor/StaticBody/CollisionShape"]
+transform = Transform( 0.312805, 0, 0, 0, 1.00478, 0, 0, 0, 0.465114, 0, 0, 0 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
 [node name="MeshInstance2" type="MeshInstance" parent="."]
 transform = Transform( 0.708983, 0, 0, 0, 1.18134, 0, 0, 0, 0.00813383, 1.03566, 1.22045, -2.30333 )
-mesh = SubResource( 3 )
+mesh = SubResource( 5 )
 material/0 = null
 
 [node name="MeshInstance6" type="MeshInstance" parent="."]
 transform = Transform( 0.708983, 0, 0, 0, 1.18134, 0, 0, 0, 0.00813383, -1.09715, 1.22045, -2.30333 )
-mesh = SubResource( 3 )
+mesh = SubResource( 5 )
 material/0 = null
 
 [node name="MeshInstance7" type="MeshInstance" parent="."]
 transform = Transform( 0.708983, 0, 0, 0, 0.706777, 0, 0, 0, 0.00813383, -0.0891745, 1.70033, -2.29874 )
-mesh = SubResource( 3 )
+mesh = SubResource( 5 )
 material/0 = null
 
 [node name="MeshInstance8" type="MeshInstance" parent="."]
 transform = Transform( -0.0823835, 0.00768771, 0.00790885, 0.0037203, 0.46804, -0.000348129, -0.350807, 0.0011174, -0.00185865, 0.241537, 0.515016, -2.66931 )
-mesh = SubResource( 3 )
+mesh = SubResource( 5 )
 material/0 = null
 
 [node name="MeshInstance9" type="MeshInstance" parent="."]
 transform = Transform( 0.401536, -0.00317186, 0, 0.000355189, 0.0446853, 0.00811755, -0.00560653, -0.705341, 0.000514269, -0.0147358, 0.041209, -2.53968 )
-mesh = SubResource( 3 )
+mesh = SubResource( 5 )
 material/0 = null
 
 [node name="MeshInstance3" type="MeshInstance" parent="."]
 transform = Transform( 1.82031, 0, 0, 0, 1.18134, 0, 0, 0, 0.00813383, 0.00608146, 1.22045, 2.26582 )
-mesh = SubResource( 3 )
+mesh = SubResource( 5 )
 material/0 = null
 
 [node name="MeshInstance4" type="MeshInstance" parent="."]
 transform = Transform( 0.00768851, 0, 0.00813376, 0, 1.18134, 0, -2.28692, 0, 4.31617e-05, -1.78362, 1.22045, -0.00595379 )
-mesh = SubResource( 3 )
+mesh = SubResource( 5 )
 material/0 = null
 
 [node name="MeshInstance5" type="MeshInstance" parent="."]
 transform = Transform( -0.0468712, 0, 0.00813247, 0, 1.18134, 0, -2.28645, 0, -0.000150893, 1.77585, 1.22413, -0.0115334 )
-mesh = SubResource( 3 )
+mesh = SubResource( 5 )
 material/0 = null
 
 [node name="OmniLight" type="OmniLight" parent="."]
@@ -87,19 +96,19 @@ transform = Transform( 0.0144683, 0, 0.999896, 0, 1, 0, -0.999896, 0, 0.0144683,
 transform = Transform( 0.408474, 0, 0, 0, 0.342595, 0, 0, 0, 1.06621, -0.331182, 0.105421, 0.448015 )
 
 [node name="FirstPersonPlayer" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0302187, 0.0375447, -0.0111046 )
+transform = Transform( 0.690731, 0, 0, 0, 0.543321, 0, 0, 0, 0.847954, 0.0302187, 0.0375447, -0.0111046 )
 
 [node name="stairs" parent="." instance=ExtResource( 4 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 0 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 1.35848, 0, 0, 0, 0.0129526, 0, 0, 0, 2.22885, -0.404179, 2.03272, 0.0430397 )
-mesh = SubResource( 4 )
+mesh = SubResource( 6 )
 material/0 = null
 
 [node name="MeshInstance10" type="MeshInstance" parent="."]
 transform = Transform( 1.71077, 0, 0, 0, 0.0129526, 0, 0, 0, 1.00808, 0.0321343, 2.03076, -1.28564 )
-mesh = SubResource( 4 )
+mesh = SubResource( 6 )
 material/0 = null
 
 [node name="OmniLight2" type="OmniLight" parent="."]
@@ -108,7 +117,7 @@ light_color = Color( 0.0627451, 0.180392, 0.333333, 1 )
 
 [node name="MeshInstance11" type="MeshInstance" parent="."]
 transform = Transform( 0.467141, 0, 0, 0, 0.0078648, 0, 0, 0, 0.307234, 1.33313, 2.03662, 1.95047 )
-mesh = SubResource( 5 )
+mesh = SubResource( 7 )
 material/0 = null
 
 [node name="Girl" parent="." instance=ExtResource( 5 )]
@@ -119,52 +128,52 @@ script = ExtResource( 6 )
 
 [node name="MeshInstance12" type="MeshInstance" parent="."]
 transform = Transform( 1.83689, 0, 0, 0, 1.28417, 0, 0, 0, 0.0226614, 0, 3.21826, 2.24881 )
-mesh = SubResource( 6 )
+mesh = SubResource( 8 )
 material/0 = null
 
 [node name="MeshInstance13" type="MeshInstance" parent="."]
 transform = Transform( 0.55817, 0, 0.00012443, 0, 1.28329, 0, 0.011427, 0, 0.0226407, -0.281998, 3.21826, -1.17506 )
-mesh = SubResource( 6 )
+mesh = SubResource( 8 )
 material/0 = null
 
 [node name="MeshInstance21" type="MeshInstance" parent="."]
 transform = Transform( 0.122542, 0, 3.90275e-05, 0, 1.28329, 0, 0.0101118, 0, 0.0226403, -1.71127, 3.21826, -1.17506 )
-mesh = SubResource( 6 )
+mesh = SubResource( 8 )
 material/0 = null
 
 [node name="MeshInstance17" type="MeshInstance" parent="."]
 transform = Transform( 0.356317, 0, 0.00165412, 0, 1.2782, 0, 0.010097, 0, 0.0224908, 1.41412, 3.21826, -1.17506 )
-mesh = SubResource( 6 )
+mesh = SubResource( 8 )
 material/0 = null
 
 [node name="MeshInstance16" type="MeshInstance" parent="."]
 transform = Transform( 0.468311, 0, 0.00239339, 0, 0.577484, 0, -0.0142602, 0, 0.0225147, 0.726056, 2.62854, -1.17388 )
-mesh = SubResource( 6 )
+mesh = SubResource( 8 )
 material/0 = null
 
 [node name="MeshInstance19" type="MeshInstance" parent="."]
 transform = Transform( 0.706769, 0, 0.00361206, 0, 0.579459, 0, -0.014309, 0, 0.0225917, -1.10898, 2.62854, -1.17388 )
-mesh = SubResource( 6 )
+mesh = SubResource( 8 )
 material/0 = null
 
 [node name="MeshInstance18" type="MeshInstance" parent="."]
 transform = Transform( 0.468311, 0, 0.00239339, 0, 0.354666, 0, -0.0142602, 0, 0.0225147, 0.726056, 4.14277, -1.16009 )
-mesh = SubResource( 6 )
+mesh = SubResource( 8 )
 material/0 = null
 
 [node name="MeshInstance20" type="MeshInstance" parent="."]
 transform = Transform( 0.674585, 0, 0.00344758, 0, 0.354666, 0, -0.0142602, 0, 0.0225147, -1.12201, 4.14277, -1.16009 )
-mesh = SubResource( 6 )
+mesh = SubResource( 8 )
 material/0 = null
 
 [node name="MeshInstance14" type="MeshInstance" parent="."]
 transform = Transform( -0.0141423, 0, 0.0226595, 0, 1.28417, 0, -1.71127, 0, -7.38174e-05, -1.81613, 3.21826, 0.508451 )
-mesh = SubResource( 6 )
+mesh = SubResource( 8 )
 material/0 = null
 
 [node name="MeshInstance15" type="MeshInstance" parent="."]
 transform = Transform( -0.0141423, 0, 0.0226595, 0, 1.28417, 0, -1.71127, 0, -7.38174e-05, 1.75756, 3.21826, 0.552603 )
-mesh = SubResource( 6 )
+mesh = SubResource( 8 )
 material/0 = null
 
 [node name="OmniLight3" type="OmniLight" parent="."]
@@ -176,5 +185,5 @@ omni_range = 1.0
 
 [node name="MeshInstance22" type="MeshInstance" parent="."]
 transform = Transform( 2.32251, 0, 0, 0, 0.867969, 0, 0, 0, 1.6576, -0.0324841, 5.285, 0.539987 )
-mesh = SubResource( 7 )
+mesh = SubResource( 9 )
 material/0 = null
